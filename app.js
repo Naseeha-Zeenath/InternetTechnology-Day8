@@ -87,3 +87,11 @@ function btnDeleteByIdOnAction() {
 }
 
 
+function btnUpdateByIdOnAction() {
+    alert("update customer");
+}
+
+function btnClearStorageOnAction() {
+    localStorage.clear();
+}
+
