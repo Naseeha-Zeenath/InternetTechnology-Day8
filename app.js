@@ -54,3 +54,19 @@ function btnAddCustomerOnAction() {
     // alert("add customer")
 }
 
+function btnSearchByIdOnAction() {
+    let customerList = JSON.parse(localStorage.getItem("customerList"));
+
+    let customer = customerList.find(customer => {
+        return customer.id === document.getElementById("txtCustomerId").value
+    });
+
+
+    document.getElementById("txtCustomerName").value = customer.name;
+    document.getElementById("txtCustomerAge").value = customer.age;
+    document.getElementById("txtCustomerAddress").value = customer.address;
+
+
+    // alert("search customer")
+}
+
