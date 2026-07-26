@@ -70,3 +70,20 @@ function btnSearchByIdOnAction() {
     // alert("search customer")
 }
 
+function btnDeleteByIdOnAction() {
+    let customerList = JSON.parse(localStorage.getItem("customerList"));
+
+    let customerId = document.getElementById("txtCustomerId").value;
+
+    let index = customerList.findIndex(customer =>{
+        return customer.id === customerId;
+    })
+
+    customerList.splice(index,1);
+
+    localStorage.setItem("customerList", JSON.stringify(customerList));
+
+    console.log(customerList);
+}
+
+
